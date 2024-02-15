@@ -148,8 +148,6 @@ public class PlayerController : MonoBehaviour
     
     private void Dash()    // 冲锋的准备工作
     {
-        Physics2D.IgnoreLayerCollision(6,7,isDash);
-        
         if (isDash) // 目前正在冲锋
         {
             if (dashRestTime > 0) // 冲锋时间还没结束
@@ -175,6 +173,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    // Animation Event
     public void AttackOver()
     {
         isAttack = false;

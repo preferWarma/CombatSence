@@ -24,8 +24,11 @@ namespace Shadow
             player = GameObject.FindGameObjectWithTag("Player").transform;
             thisSpriteRenderer = GetComponent<SpriteRenderer>();
             playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+            
             alpha = initialAlpha;
             thisSpriteRenderer.sprite = playerSpriteRenderer.sprite;    // 设置残影图像
+            thisSpriteRenderer.flipX = playerSpriteRenderer.flipX;    // 设置残影的翻转
+            thisSpriteRenderer.flipY = playerSpriteRenderer.flipY;    // 设置残影的翻转
             transform.position = player.position;   // 设置残影位置
             transform.localScale = player.localScale;   // 设置残影大小
             transform.rotation = player.rotation;   // 设置残影旋转
